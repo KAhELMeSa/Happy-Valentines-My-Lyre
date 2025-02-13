@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap');
+/* General Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6e6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    flex-direction: column;
+    transition: background-color 2s ease;
+}
+
+/* GIF Styling */
+#gif {
+    width: 1000px;
+    height: 1000px;
+    transition: opacity 1s ease-in-out;
+    margin-bottom: -50px;
+}
+
+#gif.hidden {
+    opacity: 0;
+}
+
+/* Valentine Box Styling */
+.valentine-box {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    transition: opacity 1.5s ease;
+}
+
+h1 {
+    color: #d6336c;
+    font-size: 24px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: opacity 1.5s ease;
+}
+
+.yes {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.no {
+    background-color: #ccc;
+    color: black;
+}
+
+.yes:hover {
+    background-color: #ff1a1a;
+}
+
+.no:hover {
+    background-color: #999;
+}
+
+/* Hidden Content (Menu) */
+.hidden {
+    display: none;
+    text-align: center;
+    transition: opacity 2s ease;
+}
+
+/* Menu Options Styling */
+#menu h2 {
+    color: #ff4d4d;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    display: block;
+    padding: 12px 24px;
+    margin: 10px auto;
+    font-size: 18px;
+    color: white;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.option-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Loading Screen Styling */
+#loadingScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffb6c1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+#loadingScreen.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Loader Animation */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #ff4d4d;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Dots Animation */
+#dots {
+    display: inline-block;
+}
+
+@keyframes dots {
+    0% {
+        content: ".";
+    }
+    33% {
+        content: "..";
+    }
+    66% {
+        content: "...";
+    }
+    100% {
+        content: "";
+    }
+}
+
+body.loading {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Ensure the crying emoji has opacity and is visible */
+/* Shrinking effect for the "No" button */
+.shrink {
+    animation: shrink 2s forwards;
+}
+
+/* Keyframes to shrink and fade the "No" button */
+@keyframes shrink {
+    0% {
+        transform: scale(1); /* Start at normal size */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0); /* Shrink to 0 */
+        opacity: 0; /* Make it invisible */
+    }
+}

@@ -1,0 +1,41 @@
+body {
+    background-color: #ffe6e6;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.message-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    text-align: left;
+    color: #d6336c;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.message-content p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Georgia', serif;
+    text-indent: 30px; /* Indent the first line of each paragraph */
+}
+
+.message-content p:first-child {
+    margin-top: 0; /* Removes the top margin from the first paragraph */
+}
